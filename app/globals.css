@@ -1,3 +1,4 @@
+We need to update app/globals.css with shadcn/ui CSS variables and base styles. The current file already has CSS variables and base styles. But the task says to update it with shadcn/ui CSS variables. Perhaps we need to add more variables like --chart-1, --chart-2 etc, or adjust the existing ones to match shadcn/ui defaults. Since the request is to "Update `app/globals.css` with shadcn/ui CSS variables and base styles", and the current file has a typical shadcn/ui setup, but we might need to add more variables for chart colors, etc. Also, shadcn/ui CSS variables typically include --chart-1 through --chart-5, and sometimes --success, --warning etc. But the existing ones seem fine. However, the task is part of a larger CRM build, so we may need to add variables for CRM branding. The task says "Update `app/globals.css` with shadcn/ui CSS variables and base styles." Since the file already has shadcn/ui variables, maybe we need to add the chart colors and maybe some additional ones. But to be safe, we should output the file as is? No, we need to make a change. The user likely wants to ensure the CSS variables are up to date with latest shadcn/ui recommendations. Let's add the chart variables and possibly adjust the radius. Also, note that the current file has a .dark class with hardcoded dark values, but shadcn/ui typically uses CSS custom properties for theme switching. The current structure is standard. I'll add the chart-1 through chart-5 variables and maybe a sidebar variable. But to keep it simple, I'll add chart variables. Also, the task instruction says "Task 36: Update `app/globals.css` with shadcn/ui CSS variables and base styles." So we should include the base styles. The current file already has base styles for * and body. Possibly we need to add `@layer base` with additional styles like `html`, `h1`, etc. But shadcn/ui typically just has the CSS variables and the base layer with border and body. I'll add the chart variables and ensure the structure is correct. I'll output the updated CSS.
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +25,11 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
@@ -46,6 +52,11 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 
   * {
